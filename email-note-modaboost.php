@@ -18,7 +18,10 @@ $jal_db_version = '1.0';
 
 define('EN_TABLE_NAME', $wpdb->prefix . 'email_notes');
 function email_note_init(){
-	include_once('admin/admin.php');
+    include_once('simple_html_dom.php');
+    include_once('zapier.php');
+    include_once('admin/admin.php');
+	include_once('admin/processed.php');
 }
 add_action('plugins_loaded', 'email_note_init');
 
