@@ -84,7 +84,7 @@ function email_plugin_display_paypal_payment_instructions( $order ) {
                 ✅ After payment, expect a confirmation email from ModaBoost within 1 to 6 hours. This process isn\'t automated, so we appreciate your patience. 
             </p>
         </div>';
-    //}
+    }
 }
 add_action( 'woocommerce_order_details_before_order_table', 'email_plugin_display_paypal_payment_instructions', 10, 1 );
 ?>
