@@ -12,6 +12,23 @@ $(document).ready (function () {
         }
     });
 
+    // Edit Mass Edit Record
+    $('#edit_record').click(function(){
+        var deleteids_arr = [];
+        
+        $("input:checkbox[class=delete_check]:checked").each(function () {
+            deleteids_arr.push($(this).val());
+        });
+        if(deleteids_arr.length > 0){
+            var idString = deleteids_arr.join(',');
+            var currentUrl = window.location.href;
+            var updatedUrl = currentUrl + '&check_id=' + idString;
+            window.history.replaceState({}, document.title, updatedUrl);
+            window.location.href = updatedUrl;
+        }
+    });
+
+
     // Delete record
     $('#delete_record').click(function(){
 
