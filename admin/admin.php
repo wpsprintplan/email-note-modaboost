@@ -2,8 +2,8 @@
 
 function Email_plugin_register_menu() {
     add_menu_page(
-        'Email Note',
-        'Email Note',
+        'Paypal Payment',
+        'Paypal Payment',
         'manage_options',
         'email-note-plugin',
         'email_note_plugin_menu_page',

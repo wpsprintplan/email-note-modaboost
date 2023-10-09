@@ -12,8 +12,8 @@ add_action('init', 'paypal_transfer_payment_instruction_post_submission');
 function email_plugin_register_submenu_for_paypal_instructions() {
     add_submenu_page(
         'email-note-plugin',
-        __( 'Paypal Transfer payment instructions', 'textdomain' ),
-        __( 'Payment Instructions', 'textdomain' ),
+        __( 'Paypal 1', 'textdomain' ),
+        __( 'Paypal 1', 'textdomain' ),
         'manage_options',
         'paypal-instructions',
         'paypal_instructions_callback'

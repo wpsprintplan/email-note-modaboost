@@ -1,7 +1,4 @@
 <?php
-    // global $wpdb;
-    // $fieldlists = $wpdb->get_results( "SELECT * FROM {$wpdb->prefix}smart_zoho_field_mapping");
-
 $servername = DB_HOST;
 $username = DB_USER;
 $password = DB_PASSWORD;
@@ -49,8 +46,7 @@ if (isset($_GET['check_id'])) {
 
     // Add title row with borders
     echo "<div style='display: flex; justify-content: space-between; margin-bottom: 10px; border: 1px solid #ccc; padding: 5px;'>";
-    echo "<div style='flex-basis: 30%; text-align: center; border-right: 1px solid #ccc;'>Record ID</div>";
-    echo "<div style='flex-basis: 30%; text-align: center; border-right: 1px solid #ccc;'>Email</div>";
+    echo "<div style='flex-basis: 60%; text-align: center; border-right: 1px solid #ccc;'>Email</div>";
     echo "<div style='flex-basis: 20%; text-align: center; border-right: 1px solid #ccc;'>Notes</div>";
     echo "<div style='flex-basis: 20%; text-align: center;'>Status</div>";
     echo "</div>";
@@ -64,8 +60,7 @@ if (isset($_GET['check_id'])) {
             $row = $result->fetch_assoc();
 
             echo "<div style='display: flex; justify-content: space-between; margin-bottom: 10px; border: 1px solid #ccc; padding: 5px;'>";
-            echo "<div style='flex-basis: 30%; text-align: center; border-right: 1px solid #ccc;'>$id</div>";
-            echo "<div style='flex-basis: 30%; text-align: center; border-right: 1px solid #ccc;'><input name='email_$id' type='email' value='" . $row['email'] . "' required></div>";
+            echo "<div style='flex-basis: 60%; text-align: center; border-right: 1px solid #ccc;'><input style='width:100%;' name='email_$id' type='email' value='" . $row['email'] . "' required></div>";
             echo "<div style='flex-basis: 20%; text-align: center; border-right: 1px solid #ccc;'><select name='notes_$id'>";
             // Add options for notes based on your requirements
             echo "<option value='burnt' " . selected($row['notes'], 'burnt', false) . ">Burnt</option>";

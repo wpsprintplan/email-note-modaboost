@@ -180,7 +180,12 @@ $conn->close();
                     <th>Notes</th>
                     <th>Status</th>
                     <th>Action</th>
-                    <th>Check All <input type="checkbox" class='checkall' id='checkall'><input type="button" id='delete_record' value='Delete' ></th>
+                    <th>
+                        Check All 
+                        <input type="checkbox" class='checkall' id='checkall'>
+                        <input type="button" id='delete_record' value='Delete' >
+                        <input type="button" id='edit_record' value='Edit' >
+                    </th>
                 </tr>
             </thead>
             <tbody>
